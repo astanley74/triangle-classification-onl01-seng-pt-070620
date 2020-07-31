@@ -14,8 +14,11 @@ class Triangle
   end
   
   def nonvalid_triangle?
-    @all_sides.length <= 0
-      return true
+    @all_sides.each do |length|
+      if length <= 0
+        return true
+      end
+    end
   end
 
   def kind
